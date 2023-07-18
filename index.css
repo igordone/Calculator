@@ -1,0 +1,202 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+/*COLOR THEMES:*/
+body{
+  height: 100vh;
+  width: 100vw;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  color: var(--text-col-body);
+}
+section{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: var(--toggle-kp-bg);
+  border-radius: 10px;
+  padding: 0.5em;
+}
+.calculator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attribution{
+  font-size: 0.3em;
+  margin-top: 2em; 
+}
+.screen{
+  height: 1.7em;
+  width: 9.6em;
+  padding: 0.5em;
+  grid-column: 1/5;
+  margin-bottom: 0.6em;
+  border-radius: 10px;
+  background-color: var(--screen-bg);
+  color: var(--text-col1);
+  font-size: 32px;
+  text-align: end;
+}
+.bttn{
+  height: 2em;
+  width: 2em;
+  margin: 0.2em;
+  border-radius: 5px;  
+  transition: 0.1ms;
+  font-size: 32px;
+}
+.bttn:hover{
+  filter: invert(0.1) ;
+}
+.bttn:active{
+  filter: invert(1) ;
+}
+/*Colors*/
+a{  
+  color: var(--link-col);
+}
+.bntCol1{
+  box-shadow: var(--key1-bd);
+  background-color: var(--key1-bg);
+  color: var(--text-col-k1);
+}
+.bntCol2{
+  box-shadow: var(--key2-bd);
+  background-color: var(--key2-bg);
+  color: var(--text-col-k2);
+  font-size: 16px;
+  height: 4em;
+  width: 4em;
+  margin: 0.4em;
+}
+#btnCol3{
+  box-shadow: var(--key3-bd);
+  background-color: var(--key3-bg);
+  color: var(--text-col-k3);
+}
+
+/*RESET && "="*/
+.col2{
+  grid-column: 1/ span 2;
+  width: 8.8em;  
+}
+.col3{
+  grid-column: 3/ span 2;
+  width: 4.4em;
+}
+
+.titleSel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10.5em;
+  margin-bottom: 1em;
+}
+.titleSel h5{
+  font-size: 34px;
+}
+.themebox{
+  font-size: 12px;  
+  display: flex;
+  align-items: flex-end;
+}
+.themebox p{
+  margin-bottom: 2px;
+  margin-right: 25px;
+}
+.whlSwt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.labels{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3px;
+}
+.switch{
+  position: relative;
+  display: flex ;
+  background-color: var(--toggle-kp-bg);
+  border-radius: 10px;
+}
+.switch input{
+  border: 0px;
+  width: 21px;
+  height: 21px;
+  opacity: 0;
+  cursor: pointer;
+}
+.slider{
+  cursor: pointer;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 3px;
+  left: 3px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--key3-bg);
+  border-radius: 10px;
+}
+
+.theme-1{
+  --main-bg-color: hsl(222, 26%, 31%);
+  --toggle-kp-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --key2-bg: hsl(225, 21%, 49%);
+  --key2-bd: 0px -4px 0px 0px hsl(224, 28%, 35%) inset;
+  --key3-bg: hsl(6, 63%, 50%);
+  --key3-bd: 0px -4px 0px 0px hsl(6, 70%, 34%) inset;
+  --key1-bg: hsl(30, 25%, 89%);
+  --key1-bd: 0px -4px 0px 0px hsl(28, 16%, 65%) inset;
+  --text-col-body: white;
+  --text-col-screen: white;
+  --text-col-k1: hsl(221, 14%, 31%);
+  --text-col-k2: white;
+  --text-col-k3: white;
+  --link-col: white;
+}
+.theme-2{
+  --main-bg-color: hsl(0, 0%, 90%);
+  --toggle-kp-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --key2-bg: hsl(185, 42%, 37%);
+  --key2-bd: 0px -4px 0px 0px hsl(185, 58%, 25%) inset;
+  --key3-bg: hsl(25, 98%, 40%);
+  --key3-bd: 0px -4px 0px 0px hsl(25, 99%, 27%) inset;
+  --key1-bg: hsl(45, 7%, 89%);
+  --key1-bd: 0px -4px 0px 0px hsl(35, 11%, 61%) inset; 
+  --text-col-body: hsl(60, 10%, 19%);
+  --text-col-screen: hsl(60, 10%, 19%);
+  --text-col-k1: hsl(60, 10%, 19%);
+  --text-col-k2: white;
+  --text-col-k3: white;
+  --link-col: hsl(60, 10%, 19%);
+} 
+.theme-3{
+  --main-bg-color: hsl(268, 75%, 9%);
+  --toggle-kp-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --key2-bg: hsl(281, 89%, 26%);
+  --key2-bd: 0px -4px 0px 0px hsl(285, 91%, 52%) inset;
+  --key3-bg: hsl(176, 100%, 44%);
+  --key3-bd: 0px -4px 0px 0px hsl(177, 92%, 70%) inset;
+  --key1-bg: hsl(268, 47%, 21%);
+  --key1-bd: 0px -4px 0px 0px hsl(290, 70%, 36%) inset; 
+  --text-col-body: hsl(52, 100%, 62%);
+  --text-col-screen: hsl(52, 100%, 62%);
+  --text-col-k1: hsl(52, 100%, 62%);
+  --text-col-k2: white;
+  --text-col-k3: hsl(198, 20%, 13%);
+  --link-col: hsl(52, 100%, 62%);
+}  
