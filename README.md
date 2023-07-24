@@ -1,4 +1,7 @@
 # Frontend Mentor - Calculator app
+<hr>
+test it here: https://igordone.github.io/Calculator/
+<hr>
 
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
